@@ -109,6 +109,6 @@ Acessibilidade (RNF03): Layout responsivo (Mobile-First para o motorista) e nave
 Backup (RNF05): A tela de "Gestão de Usuários" (Admin) possui um botão que gera e baixa o arquivo .sql completo do banco de dados.
 
 👨‍💻 Equipe Desenvolvedora
-[Seu Nome / Nome da Equipe]
+Escarlate
 
-Projeto desenvolvido para a competição [Nome da Competiçã
+Projeto desenvolvido para a competição Dev Experience
