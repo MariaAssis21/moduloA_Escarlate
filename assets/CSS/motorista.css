@@ -1,0 +1,233 @@
+/* ================= ESTILOS EXCLUSIVOS DO MOTORISTA ================= */
+body.motorista-page {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-motorista {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Topbar */
+.topbar-motorista {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.topbar-motorista h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #111827;
+}
+
+.btn-sair {
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.btn-sair:hover {
+    background: #ef4444;
+    color: white;
+}
+
+/* Cards de Entrega */
+.card-entrega {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-left: 6px solid #2563eb; /* Faixa azul na esquerda */
+    transition: transform 0.2s;
+}
+
+.card-entrega.prioridade-alta {
+    border-left-color: #ef4444; /* Vermelho para urgente */
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.card-entrega h3 {
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    color: #111827;
+}
+
+.endereco {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.codigo-pedido {
+    text-align: right;
+}
+.codigo-pedido span {
+    display: block;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+.codigo-pedido strong {
+    color: #374151;
+    font-size: 1rem;
+}
+
+/* Botão de Ação no Card */
+.btn-confirmar {
+    width: 100%;
+    padding: 14px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+    margin-top: 15px;
+}
+.btn-confirmar:hover {
+    background: #059669;
+}
+
+/* Badges de Prioridade */
+.badge-prioridade {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.badge-alta { background: #fee2e2; color: #991b1b; }
+.badge-normal { background: #fef3c7; color: #92400e; }
+.badge-baixa { background: #d1fae5; color: #065f46; }
+
+/* Modal (Fundo escuro) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(17, 24, 39, 0.7); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(3px); /* Efeito de vidro embaçado */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    animation: subirModal 0.3s ease;
+}
+
+@keyframes subirModal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: #111827;
+}
+
+.modal-content p {
+    color: #6b7280;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form-group-modal {
+    margin-bottom: 16px;
+}
+.form-group-modal label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+.form-group-modal input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+.form-group-modal input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.modal-botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-cancelar, .btn-enviar {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.btn-cancelar {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+.btn-cancelar:hover { background: #e5e7eb; }
+
+.btn-enviar {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+.btn-enviar:hover { background: #1d4ed8; }
+
+/* Acessibilidade (RNF03) - Foco visível para navegação por teclado */
+*:focus-visible {
+    outline: 3px solid #f59e0b !important;
+    outline-offset: 2px;
+}
